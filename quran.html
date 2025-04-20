@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>التلاوات - أثر باقي</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- القائمة العلوية -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>أثر باقي</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="quran.html" class="active">التلاوات</a></li>
+            <li><a href="education.html">التعليم</a></li>
+            <li><a href="articles.html">المقالات</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="support.html" class="support-btn">ادعم الموقع</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- عنوان الصفحة -->
+    <section class="page-title">
+      <div class="container">
+        <h1>تلاوات القرآن الكريم</h1>
+        <p>استمع إلى تلاوات عطرة للقرآن الكريم</p>
+      </div>
+    </section>
+
+    <!-- قسم البحث والتصفية -->
+    <section class="search-filter">
+      <div class="container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="ابحث عن سورة..." />
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <p id="resultsCount" style="display: none;">عدد النتائج: 0</p>
+        <p id="noResults" style="display: none; color: red">
+          لا توجد نتائج مطابقة.
+        </p>
+        <div class="filter-options">
+          <div class="filter-group">
+            <span>الترتيب حسب:</span>
+            <select id="sort-select">
+              <option value="quran-order">ترتيب المصحف</option>
+              <option value="name-asc">اسم السورة (أ-ي)</option>
+              <option value="name-desc">اسم السورة (ي-أ)</option>
+              <option value="popularity">الأكثر استماعاً</option>
+              <option value="newest">الأحدث</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <span>التصنيف:</span>
+            <select id="category-select">
+              <option value="all">الكل</option>
+              <option value="short">السور القصيرة</option>
+              <option value="medium">السور المتوسطة</option>
+              <option value="long">السور الطويلة</option>
+              <option value="makkah">المكية</option>
+              <option value="madinah">المدنية</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم السور -->
+    <section class="quran-surahs">
+      <div class="container">
+        <div class="surahs-grid">
+          <!-- الفاتحة -->
+          <div class="surah-card">
+            <div class="surah-header">
+              <div class="surah-info">
+                <h3>سورة الفاتحة</h3>
+                <div class="surah-meta">
+                  <span class="surah-number">1</span>
+                  <span class="surah-type">مكية</span>
+                  <span class="surah-ayahs">7 آيات</span>
+                </div>
+              </div>
+              <div class="surah-stats">
+                <span class="listen-count"
+                  ><i class="fas fa-headphones"></i> 1254</span
+                >
+              </div>
+            </div>
+            <div class="surah-content">
+              <div class="audio-player">
+                <audio controls>
+                  <source src="#" type="audio/mpeg" />
+                  متصفحك لا يدعم مشغل الصوت.
+                </audio>
+              </div>
+              <div class="surah-text toggle-content">
+                <p>
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (1) الْحَمْدُ لِلَّهِ
+                  رَبِّ الْعَالَمِينَ (2) الرَّحْمَنِ الرَّحِيمِ (3) مَالِكِ
+                  يَوْمِ الدِّينِ (4) إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ
+                  (5) اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (6) صِرَاطَ الَّذِينَ
+                  أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا
+                  الضَّالِّينَ (7)
+                </p>
+              </div>
+              <div class="tafseer toggle-content">
+                <h4>تفسير مختصر</h4>
+                <p>
+                  سورة الفاتحة هي أم الكتاب وأعظم سورة في القرآن الكريم، تتضمن
+                  الثناء على الله عز وجل وتوحيده والإقرار بيوم الحساب، وتوضح
+                  علاقة العبد بربه، وهي تشمل دعاء العبد ربه الهداية إلى الصراط
+                  المستقيم وتجنب طريق المغضوب عليهم والضالين.
+                </p>
+              </div>
+              <div class="surah-actions">
+                <button class="toggle-text-btn">اعرض/اخفِ النص</button>
+                <button class="toggle-tafseer-btn">اعرض/اخفِ التفسير</button>
+                <button class="share-btn">
+                  <i class="fas fa-share-alt"></i> شارك الأجر
+                </button>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> تحميل
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- البقرة -->
+          <div class="surah-card">
+            <div class="surah-header">
+              <div class="surah-info">
+                <h3>سورة البقرة (الآيات 1-10)</h3>
+                <div class="surah-meta">
+                  <span class="surah-number">2</span>
+                  <span class="surah-type">مدنية</span>
+                  <span class="surah-ayahs">286 آية</span>
+                </div>
+              </div>
+              <div class="surah-stats">
+                <span class="listen-count"
+                  ><i class="fas fa-headphones"></i> 986</span
+                >
+              </div>
+            </div>
+            <div class="surah-content">
+              <div class="audio-player">
+                <audio controls>
+                  <source src="#" type="audio/mpeg" />
+                  متصفحك لا يدعم مشغل الصوت.
+                </audio>
+              </div>
+              <div class="surah-text toggle-content">
+                <p>
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ الم (1) ذَلِكَ
+                  الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِلْمُتَّقِينَ (2) الَّذِينَ
+                  يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا
+                  رَزَقْنَاهُمْ يُنْفِقُونَ (3) وَالَّذِينَ يُؤْمِنُونَ بِمَا
+                  أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآخِرَةِ
+                  هُمْ يُوقِنُونَ (4) أُولَئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ
+                  وَأُولَئِكَ هُمُ الْمُفْلِحُونَ (5) إِنَّ الَّذِينَ كَفَرُوا
+                  سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا
+                  يُؤْمِنُونَ (6) خَتَمَ اللَّهُ عَلَى قُلُوبِهِمْ وَعَلَى
+                  سَمْعِهِمْ وَعَلَى أَبْصَارِهِمْ غِشَاوَةٌ وَلَهُمْ عَذَابٌ
+                  عَظِيمٌ (7) وَمِنَ النَّاسِ مَنْ يَقُولُ آمَنَّا بِاللَّهِ
+                  وَبِالْيَوْمِ الْآخِرِ وَمَا هُمْ بِمُؤْمِنِينَ (8)
+                  يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ
+                  إِلَّا أَنْفُسَهُمْ وَمَا يَشْعُرُونَ (9) فِي قُلُوبِهِمْ
+                  مَرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا وَلَهُمْ عَذَابٌ أَلِيمٌ
+                  بِمَا كَانُوا يَكْذِبُونَ (10)
+                </p>
+              </div>
+              <div class="tafseer toggle-content">
+                <h4>تفسير مختصر</h4>
+                <p>
+                  تبدأ سورة البقرة بالحروف المقطعة "الم"، ثم تصف القرآن بأنه
+                  كتاب لا شك فيه وهو هداية للمتقين. توضح الآيات صفات المؤمنين من
+                  إيمان بالغيب وإقامة الصلاة والإنفاق والإيمان بما أنزل. ثم تبين
+                  حال الكافرين والمنافقين وصفاتهم.
+                </p>
+              </div>
+              <div class="surah-actions">
+                <button class="toggle-text-btn">اعرض/اخفِ النص</button>
+                <button class="toggle-tafseer-btn">اعرض/اخفِ التفسير</button>
+                <button class="share-btn">
+                  <i class="fas fa-share-alt"></i> شارك الأجر
+                </button>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> تحميل
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- الإخلاص -->
+          <div class="surah-card">
+            <div class="surah-header">
+              <div class="surah-info">
+                <h3>سورة الإخلاص</h3>
+                <div class="surah-meta">
+                  <span class="surah-number">112</span>
+                  <span class="surah-type">مكية</span>
+                  <span class="surah-ayahs">4 آيات</span>
+                </div>
+              </div>
+              <div class="surah-stats">
+                <span class="listen-count"
+                  ><i class="fas fa-headphones"></i> 1543</span
+                >
+              </div>
+            </div>
+            <div class="surah-content">
+              <div class="audio-player">
+                <audio controls>
+                  <source src="#" type="audio/mpeg" />
+                  متصفحك لا يدعم مشغل الصوت.
+                </audio>
+              </div>
+              <div class="surah-text toggle-content">
+                <p>
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ قُلْ هُوَ اللَّهُ أَحَدٌ
+                  (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3)
+                  وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ (4)
+                </p>
+              </div>
+              <div class="tafseer toggle-content">
+                <h4>تفسير مختصر</h4>
+                <p>
+                  سورة الإخلاص هي سورة توحيد خالصة، تعدل ثلث القرآن كما صح في
+                  الحديث. تبين صفات الله عز وجل من الوحدانية والصمدية وأنه ليس
+                  بوالد ولا مولود، ولا يوجد من يماثله أو يشبهه سبحانه وتعالى.
+                </p>
+              </div>
+              <div class="surah-actions">
+                <button class="toggle-text-btn">اعرض/اخفِ النص</button>
+                <button class="toggle-tafseer-btn">اعرض/اخفِ التفسير</button>
+                <button class="share-btn">
+                  <i class="fas fa-share-alt"></i> شارك الأجر
+                </button>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> تحميل
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- الفلق -->
+          <div class="surah-card">
+            <div class="surah-header">
+              <div class="surah-info">
+                <h3>سورة الفلق</h3>
+                <div class="surah-meta">
+                  <span class="surah-number">113</span>
+                  <span class="surah-type">مكية</span>
+                  <span class="surah-ayahs">5 آيات</span>
+                </div>
+              </div>
+              <div class="surah-stats">
+                <span class="listen-count"
+                  ><i class="fas fa-headphones"></i> 1021</span
+                >
+              </div>
+            </div>
+            <div class="surah-content">
+              <div class="audio-player">
+                <audio controls>
+                  <source src="#" type="audio/mpeg" />
+                  متصفحك لا يدعم مشغل الصوت.
+                </audio>
+              </div>
+              <div class="surah-text toggle-content">
+                <p>
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ
+                  الْفَلَقِ (1) مِنْ شَرِّ مَا خَلَقَ (2) وَمِنْ شَرِّ غَاسِقٍ
+                  إِذَا وَقَبَ (3) وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4)
+                  وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)
+                </p>
+              </div>
+              <div class="tafseer toggle-content">
+                <h4>تفسير مختصر</h4>
+                <p>
+                  سورة الفلق من سور الاستعاذة، يأمر الله فيها نبيه والمؤمنين
+                  بالاستعاذة برب الفلق (الصبح) من شر جميع المخلوقات، وشر الليل
+                  إذا أقبل بظلامه، وشر السحرة، وشر الحاسدين. وهي من السور التي
+                  يستعيذ بها المسلم من الشرور المختلفة.
+                </p>
+              </div>
+              <div class="surah-actions">
+                <button class="toggle-text-btn">اعرض/اخفِ النص</button>
+                <button class="toggle-tafseer-btn">اعرض/اخفِ التفسير</button>
+                <button class="share-btn">
+                  <i class="fas fa-share-alt"></i> شارك الأجر
+                </button>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> تحميل
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- الناس -->
+          <div class="surah-card">
+            <div class="surah-header">
+              <div class="surah-info">
+                <h3>سورة الناس</h3>
+                <div class="surah-meta">
+                  <span class="surah-number">114</span>
+                  <span class="surah-type">مكية</span>
+                  <span class="surah-ayahs">6 آيات</span>
+                </div>
+              </div>
+              <div class="surah-stats">
+                <span class="listen-count"
+                  ><i class="fas fa-headphones"></i> 1122</span
+                >
+              </div>
+            </div>
+            <div class="surah-content">
+              <div class="audio-player">
+                <audio controls>
+                  <source src="#" type="audio/mpeg" />
+                  متصفحك لا يدعم مشغل الصوت.
+                </audio>
+              </div>
+              <div class="surah-text toggle-content">
+                <p>
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ
+                  النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَهِ النَّاسِ (3) مِنْ
+                  شَرِّ الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي
+                  صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)
+                </p>
+              </div>
+              <div class="tafseer toggle-content">
+                <h4>تفسير مختصر</h4>
+                <p>
+                  سورة الناس من سور الاستعاذة، يأمر الله فيها نبيه والمؤمنين
+                  بالاستعاذة برب الناس وملكهم وإلههم، من شر الوسواس الخناس الذي
+                  يوسوس في صدور الناس سواء من الجن أو الإنس. وهي آخر سورة في
+                  القرآن الكريم.
+                </p>
+              </div>
+              <div class="surah-actions">
+                <button class="toggle-text-btn">اعرض/اخفِ النص</button>
+                <button class="toggle-tafseer-btn">اعرض/اخفِ التفسير</button>
+                <button class="share-btn">
+                  <i class="fas fa-share-alt"></i> شارك الأجر
+                </button>
+                <button class="download-btn">
+                  <i class="fas fa-download"></i> تحميل
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button class="prev-page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="page-numbers">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>...</span>
+            <span>12</span>
+          </div>
+          <button class="next-page"><i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الورد اليومي -->
+    <section class="daily-wird">
+      <div class="container">
+        <h2 class="section-title">برنامج الورد اليومي</h2>
+        <p class="section-desc">
+          اجعل للقرآن نصيباً من يومك من خلال برنامج الورد اليومي المقترح
+        </p>
+
+        <div class="wird-options">
+          <div class="wird-option-card">
+            <div class="wird-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>المبتدئ</h3>
+            <p>صفحة واحدة يومياً</p>
+            <p class="wird-duration">وقت التلاوة: ~5 دقائق</p>
+            <button class="btn secondary-btn">ابدأ اليوم</button>
+          </div>
+
+          <div class="wird-option-card">
+            <div class="wird-icon">
+              <i class="fas fa-tree"></i>
+            </div>
+            <h3>المتوسط</h3>
+            <p>ربع حزب يومياً</p>
+            <p class="wird-duration">وقت التلاوة: ~15 دقيقة</p>
+            <button class="btn secondary-btn">ابدأ اليوم</button>
+          </div>
+
+          <div class="wird-option-card">
+            <div class="wird-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3>المتقدم</h3>
+            <p>جزء كامل يومياً</p>
+            <p class="wird-duration">وقت التلاوة: ~45 دقيقة</p>
+            <button class="btn secondary-btn">ابدأ اليوم</button>
+          </div>
+
+          <div class="wird-option-card custom">
+            <div class="wird-icon">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3>مخصص</h3>
+            <p>حدد وردك المفضل</p>
+            <p class="wird-duration">حسب اختيارك</p>
+            <button class="btn primary-btn">تخصيص</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3>أثر باقي</h3>
+            <p>
+              مبادرة لنشر تلاوات القرآن الكريم وتعليم أحكامه، سعياً للأجر
+              المستمر والنفع الدائم.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="quran.html">التلاوات</a></li>
+              <li><a href="education.html">التعليم</a></li>
+              <li><a href="articles.html">المقالات</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="support.html">ادعم الموقع</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>تواصل معنا</h3>
+            <ul>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:contact@atharbaqi.com">contact@atharbaqi.com</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+XXXXXXXXXX">+XX XXXX XXXX</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>جميع الحقوق محفوظة &copy; 2025 - أثر باقي</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
