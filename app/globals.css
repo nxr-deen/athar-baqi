@@ -1658,6 +1658,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 0;
+    }
+
     .about-content, 
     .about-image {
         flex: 100%;
@@ -1706,6 +1710,7 @@ footer {
     .newsletter-form {
         flex-direction: column;
     }
+    
 }
 
 @media (max-width: 576px) {
