@@ -2,6 +2,10 @@
 
 Thank you for your interest in contributing to the "Athar Baqi" project! This document provides guidelines for contributors on how to participate in the project's development.
 
+## Code of Conduct
+
+We have adopted the Contributor Covenant as our Code of Conduct, and we expect all project participants to adhere to it. Please read the [full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+
 ## How to Contribute
 
 ### Reporting Bugs
