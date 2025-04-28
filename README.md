@@ -110,10 +110,3 @@ We welcome your contributions to the development of the project. Please follow t
 ## License
 
 This project is licensed under the [MIT License](LICENSE)
-
-## Contact and Support
-
-For inquiries and technical support, please contact:
-
-- Email: info@example.com
-- Twitter: @athar_baqi
