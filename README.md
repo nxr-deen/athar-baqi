@@ -30,7 +30,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/athar-baqi.git
+git clone https://github.com/nxr-deen/athar-baqi.git
 cd athar-baqi
 ```
 
